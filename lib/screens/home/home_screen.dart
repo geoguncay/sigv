@@ -3,14 +3,35 @@ import 'package:flutter_svg/svg.dart';
 import 'package:sigv/constants.dart';
 import 'components/body.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen>  {
+  int selectedIndex = 0;
+  final pages = [
+    const Center(
+      child: Body(),
+    ),
+    const Center(
+      child: Text('Buscar'),
+    ),
+    const Center(
+      child: Text('Perfil'),
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: const Body(),
+      body: IndexedStack(
+        index: selectedIndex,
+        children: pages,
+      ),
+      bottomNavigationBar: bottomNavigationBar(),
     );
   }
 
@@ -42,6 +63,28 @@ class HomeScreen extends StatelessWidget {
         ),
         const SizedBox(width: kDefaultPaddin / 2)
       ],
+    );
+  }
+
+  BottomNavigationBar bottomNavigationBar(){
+    return BottomNavigationBar(
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Inicio',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.search),
+          label: 'Buscar',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person),
+          label: 'Perfil',
+        ),
+      ],
+      currentIndex: selectedIndex,
+      selectedItemColor: Colors.amber[800],
+      onTap: (index) => setState(() => selectedIndex = index),
     );
   }
 }
