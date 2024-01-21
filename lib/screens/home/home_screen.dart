@@ -4,13 +4,12 @@ import 'package:sigv/constants.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen>  {
-
   int selectedIndex = 0;
   final pages = [
     const Center(

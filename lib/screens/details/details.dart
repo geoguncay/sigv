@@ -4,16 +4,15 @@ import 'package:sigv/screens/details/components/Body.dart';
 import '../../constants.dart';
 import '../../models/Product.dart';
 
-
-
 class DetailsScreen extends StatelessWidget {
   final Product product;
 
-  const DetailsScreen({super.key, required this.product});
+  const DetailsScreen ({
+    Key? key, required this.product
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: product.color,
       appBar: buildAppBar(context),
@@ -22,10 +21,9 @@ class DetailsScreen extends StatelessWidget {
   }
 
   AppBar buildAppBar(BuildContext context) {
-
     return AppBar(
       backgroundColor: product.color,
-      elevation: 0,
+      elevation: 1,
       leading: IconButton(
         icon: SvgPicture.asset(
           'assets/icons/back.svg',

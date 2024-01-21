@@ -17,11 +17,11 @@ class ItemCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: const EdgeInsets.all(kDefaultPaddin),
+              // padding: const EdgeInsets.all(100),
               decoration: BoxDecoration(
                 color: product.color,
                 borderRadius: BorderRadius.circular(16),
@@ -42,6 +42,9 @@ class ItemCard extends StatelessWidget {
           Text(
             "\$${product.price}",
             style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(
+            product.description,
           )
         ],
       ),

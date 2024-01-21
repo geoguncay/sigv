@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../models/Product.dart';
+import 'color_size.dart';
 
 class Body extends StatelessWidget {
   final Product product;
 
-  const Body({super.key, required this.product});
+  const Body({
+    super.key,
+    required this.product
+  });
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
-        children: <Widget>[
+        children: [
           SizedBox(
             height: size.height,
             child: Stack(
-              children: <Widget>[
+              children: [
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
                   padding: EdgeInsets.only(
@@ -24,7 +28,7 @@ class Body extends StatelessWidget {
                     left: kDefaultPaddin,
                     right: kDefaultPaddin,
                   ),
-                  // height: 500,
+                  height: 500,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -32,17 +36,17 @@ class Body extends StatelessWidget {
                       topRight: Radius.circular(24),
                     ),
                   ),
-                  // child: Column(
-                  //   children: <Widget>[
-                  //     ColorAndSize(product: product),
-                  //     SizedBox(height: kDefaultPaddin / 2),
-                  //     Description(product: product),
-                  //     SizedBox(height: kDefaultPaddin / 2),
-                  //     CounterWithFavBtn(),
-                  //     SizedBox(height: kDefaultPaddin / 2),
-                  //     AddToCart(product: product)
-                  //   ],
-                  // ),
+                  child: Column(
+                    children: [
+                      ColorAndSize(product: product,),
+                      const SizedBox(height: kDefaultPaddin / 2),
+                      // Description(product: product),
+                      const SizedBox(height: kDefaultPaddin / 2),
+                      // CounterWithFavBtn(),
+                      const SizedBox(height: kDefaultPaddin / 2),
+                      // AddToCart(product: product)
+                    ],
+                  ),
                 ),
                 // ProductTitleWithImage(product: product)
               ],
@@ -53,3 +57,4 @@ class Body extends StatelessWidget {
     );
   }
 }
+
