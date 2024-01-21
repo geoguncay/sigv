@@ -52,7 +52,7 @@ class _CartCounterState extends State<CartCounter> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(13),
           ),
-          side: BorderSide(color: Colors.black),
+          side: const BorderSide(color: Colors.black),
           padding: EdgeInsets.zero,
         ),
       ),

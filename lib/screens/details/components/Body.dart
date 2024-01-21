@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sigv/screens/details/components/description.dart';
 import 'package:sigv/screens/details/components/fav_btn.dart';
+import 'package:sigv/screens/details/components/product_image.dart';
 import '../../../constants.dart';
 import '../../../models/Product.dart';
 import 'add_to_car.dart';
@@ -31,7 +32,7 @@ class Body extends StatelessWidget {
                     left: kDefaultPaddin,
                     right: kDefaultPaddin,
                   ),
-                  height: 500,
+                  // height: 500,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -47,11 +48,12 @@ class Body extends StatelessWidget {
                       const SizedBox(height: kDefaultPaddin / 2),
                       const CounterWithFavBtn(),
                       const SizedBox(height: kDefaultPaddin / 2),
-                      AddToCart(product: product)
+                      AddToCart(product: product),
+                      // const SizedBox(height: kDefaultPaddin / 2),
                     ],
                   ),
                 ),
-                // ProductTitleWithImage(product: product)
+                ProductTitleWithImage(product: product)
               ],
             ),
           )

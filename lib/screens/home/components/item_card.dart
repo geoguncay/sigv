@@ -23,7 +23,7 @@ class ItemCard extends StatelessWidget {
             child: Container(
               // padding: const EdgeInsets.all(100),
               decoration: BoxDecoration(
-                color: product.color,
+                // color: product.color,
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Hero(
