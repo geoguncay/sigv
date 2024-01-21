@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sigv/screens/details/components/description.dart';
+import 'package:sigv/screens/details/components/fav_btn.dart';
 import '../../../constants.dart';
 import '../../../models/Product.dart';
 import 'color_size.dart';
@@ -43,7 +44,7 @@ class Body extends StatelessWidget {
                       const SizedBox(height: kDefaultPaddin / 2),
                       Description(product: product),
                       const SizedBox(height: kDefaultPaddin / 2),
-                      // CounterWithFavBtn(),
+                      CounterWithFavBtn(),
                       const SizedBox(height: kDefaultPaddin / 2),
                       // AddToCart(product: product)
                     ],
