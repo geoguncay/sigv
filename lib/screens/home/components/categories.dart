@@ -1,17 +1,14 @@
-
-
 import 'package:flutter/material.dart';
-
 import '../../../constants.dart';
 
 class Categories extends StatefulWidget {
   const Categories({super.key});
 
   @override
-  _CategoriesState createState() => _CategoriesState();
+  CategoriesState createState() => CategoriesState();
 }
 
-class _CategoriesState extends State<Categories> {
+class CategoriesState extends State<Categories> {
   List<String> categories = ["Mac", "Airpods", "iPad", "iPhone"];
   int selectedIndex = 0;
   @override
@@ -40,7 +37,7 @@ class _CategoriesState extends State<Categories> {
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
+          children: [
             Text(
               categories[index],
               style: TextStyle(

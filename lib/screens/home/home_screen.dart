@@ -10,6 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen>  {
+
   int selectedIndex = 0;
   final pages = [
     const Center(
@@ -39,13 +40,13 @@ class _HomeScreenState extends State<HomeScreen>  {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 1,
-      leading: IconButton(
-        icon: ColorFiltered(
-          colorFilter: const ColorFilter.mode(kTextColor, BlendMode.srcIn),
-          child: SvgPicture.asset("assets/icons/back.svg"),
-        ),
-        onPressed: () {},
-      ),
+      // leading: IconButton(
+      //   icon: ColorFiltered(
+      //     colorFilter: const ColorFilter.mode(kTextColor, BlendMode.srcIn),
+      //     child: SvgPicture.asset("assets/icons/back.svg"),
+      //   ),
+      //   onPressed: () {},
+      // ),
       actions: <Widget>[
         IconButton(
           icon: ColorFiltered(
@@ -88,4 +89,6 @@ class _HomeScreenState extends State<HomeScreen>  {
     );
   }
 }
+
+
 

@@ -8,7 +8,6 @@ import 'item_card.dart';
 class Body extends StatelessWidget {
   const Body({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,7 +29,7 @@ class Body extends StatelessWidget {
             child: GridView.builder(
                 itemCount: products.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                  crossAxisCount: 4,
                   mainAxisSpacing: kDefaultPaddin,
                   crossAxisSpacing: kDefaultPaddin,
                   childAspectRatio: 0.75,

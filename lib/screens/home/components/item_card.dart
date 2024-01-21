@@ -4,6 +4,7 @@ import '../../../models/Product.dart';
 
 class ItemCard extends StatelessWidget {
   final Product product;
+
   final VoidCallback press; // Cambia Function a VoidCallback
   const ItemCard({
     Key? key,
@@ -32,7 +33,7 @@ class ItemCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 2),
             child: Text(
               product.title,
               style: const TextStyle(color: kTextLightColor),

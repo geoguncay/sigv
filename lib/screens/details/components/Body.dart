@@ -5,10 +5,10 @@ import '../../../models/Product.dart';
 class Body extends StatelessWidget {
   final Product product;
 
-  const Body({required Key key, required this.product}) : super(key: key);
+  const Body({super.key, required this.product});
+
   @override
   Widget build(BuildContext context) {
-    // It provide us total height and width
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
                     right: kDefaultPaddin,
                   ),
                   // height: 500,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(24),
